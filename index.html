@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <style>
+        *{
+            background-color: #FEFEDF;
+        }
+        #main{
+            visibility: visible;
+            width: 50%;
+            height: 80vh;
+            margin: auto;
+            margin-top: 10vh;
+            background-color: #C4FCEF;
+            border: solid 2px #845EC2;
+            display: flex;
+            flex-direction: column;
+            /* align-content: space-around; */
+            justify-content: center;
+        }
+        #main>label, #main>input{
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2vh;
+        }
+        input[type= date]{
+            font-size: 2.5vh;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        input[type= submit]{
+            background-color: #FF8066;
+            font-family: fantasy;
+            font-size: 3vh;
+            border: none;
+            border-radius: 15px;
+        }
+        label{
+            text-align: center;
+            background-color: inherit;
+            font-family: fantasy;
+            font-size: 5vh;
+        }
+        #answer{
+            visibility: hidden;
+            width: 50%;
+            height: 50vh;
+            background-color: #D65DB1;
+            color: #FFC75F;
+            position: absolute;
+            top: 10vh;
+            left: 25%;
+            padding-top: 18vh;
+            border: solid 5px #845EC2;
+            /* border-radius: 5vh; */
+            font-size: 5vh;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <label for="input" id="label">Select your birthday date</label>
+        <input type="date" id="date" >
+        <input 
+        type="submit" 
+        name="Submit" 
+        id="Submit" 
+        onclick="change()">
+    </div>
+    <div id="answer"></div>
+    <script src="./script.js"></script>
+</body>
+</html>
