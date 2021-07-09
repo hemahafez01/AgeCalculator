@@ -21,9 +21,13 @@ function change(){
     
     let resultYear = todayYear - bYear;
     let resultMonth = todayMonth - bMonth;
-    resultMonth < 0 ? resultMonth + 12, resultYear - 1 : resultMonth;
+    if (resultMonth < 0) {
+        resultMonth + 12;
+        resultYear - 1};
     let resultDay = todayDay - bDay;
-    resultDay < 0 ? resultMonth + 30, resultMonth - 1 : resultDay;
+    if (resultDay < 0){
+        resultMonth + 30;
+        resultMonth - 1};
     // console.log(resultYear, resultMonth, resultDay);
     // let result ={
         // resultYear = resultYear,
