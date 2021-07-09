@@ -31,7 +31,7 @@ function change(){
     let main = document.getElementById("main");
     let answer = document.getElementById("answer");
     main.style.visibility = "hidden";
-    answer.innerHTML = "You are " + resultYear + " Years, " + resultMonth + " Months and " + resultDay + " Days."
+    answer.innerHTML = "You are " + resultYear + " Years, " + resultMonth + " Months and " + resultDay + " Days old."
     // console.log(answer.innerHTML);
     answer.style.visibility = "visible";
     return answer;
