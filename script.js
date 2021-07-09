@@ -22,12 +22,17 @@ function change(){
     let resultYear = todayYear - bYear;
     let resultMonth = todayMonth - bMonth;
     if (resultMonth < 0) {
-        resultMonth + 12;
-        resultYear - 1};
+        resultMonth = resultMonth + 12;
+        resultYear = resultYear - 1};
     let resultDay = todayDay - bDay;
     if (resultDay < 0){
-        resultMonth + 30;
-        resultMonth - 1};
+        resultDay = resultDay + 30 ;
+        resultMonth = resultMonth - 1;
+        if (resultMonth < 0) {
+            resultMonth = resultMonth + 12;
+            // console.log(resultMonth);
+            resultYear = resultYear - 1;
+        }};
     // console.log(resultYear, resultMonth, resultDay);
     // let result ={
         // resultYear = resultYear,
@@ -37,7 +42,7 @@ function change(){
     let main = document.getElementById("main");
     let answer = document.getElementById("answer");
     main.style.visibility = "hidden";
-    answer.innerHTML = "You are " + resultYear + " Years, " + resultMonth + " Months and " + resultDay + " Days old."
+    answer.innerHTML = "You are " + resultYear + " Years, " + resultMonth + " Months and " + resultDay + " Days."
     // console.log(answer.innerHTML);
     answer.style.visibility = "visible";
     return answer;
